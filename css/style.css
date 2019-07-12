@@ -203,6 +203,32 @@
   }
 }
 
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.demo-1 .large-header {
+  background-image: url("../images/demo-1-bg.jpg");
+}
+
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -321,48 +347,9 @@ h4.subHeading {
   margin-top: 20px;
 }
 
-/*----------------------------------------------------
- 3.	Header Part
-------------------------------------------------------*/
-header {
-  position: relative;
+.headerText {
+  vertical-align: middle;
 }
-.banner {
-  overflow: hidden;
-  margin: 0 auto !important;
-  background: #cacaca;
-}
-
-.bannerText {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 35%;
-  text-align: center;
-  padding: 30px 0 30px;
-  max-width: 960px;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
-  zoom: 1;
-}
-
-.bannerText h2 {
-  font-size: 34px;
-  text-transform: none;
-}
-
-/*------------------------------------
-	3.1 Slide show background control
---------------------------------------*/
-.cb-slideshow {
-  background: #1b1f2b;
-}
-.cb-slideshow li {
-  opacity: 0.2;
-  filter: alpha(opacity=20); /* For IE8 and earlier */
-}
-
 /*---------------------------------------------------------------------------------
  4. Background slider CSS style
 -------------------------------------------------------------------------------*/
@@ -530,7 +517,8 @@ header {
   margin-top: 0px;
   position: relative;
   z-index: 15;
-  background: #262b37;
+  background: #1e222b;
+  border-bottom: 2px solid #171a20;
 }
 .navbar-wrapper .container {
   padding: 0px;
@@ -545,7 +533,7 @@ header {
 
 .navbar.navbar-inverse.navbar-static-top {
   margin: 0px auto;
-  background: #262b37;
+  background: #1e222b;
   color: #c3c8d6;
   border: none;
   font-family: "Open Sans", sans-serif;
@@ -560,19 +548,25 @@ header {
 }
 .navbar.navbar-inverse.navbar-static-top a:hover {
   color: #fff;
+  text-decoration: underline;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background: #1b1f29;
+  background: #1e222b;
   color: #c3c8d6;
 }
 .navbar-inverse .navbar-nav > .active > a:hover {
-  background: #1b1f29;
+  background: #1e222b;
   color: #fff;
 }
 
 .hideClass {
   display: none;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -603,7 +597,7 @@ header {
 ------------------------------------------------------*/
 
 .aboutme {
-  background: #00bdbd;
+  background: #262b37;
   color: #fff;
   position: relative;
 }
@@ -613,7 +607,7 @@ header {
 }
 
 .aboutTop {
-  background: #00bdbd;
+  background: #262b37;
   height: 60px;
 }
 .spHeight .aboutTop {
@@ -624,13 +618,14 @@ header {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  background: #474d5d;
+  background: #ff675f;
+  color: rgb(63, 63, 63);
   padding: 16px 22px;
   display: inline-block;
 }
 .bntDownload:hover {
-  background: #373d4c;
-  color: #cccccc;
+  background: #f5534b;
+  color: white;
   text-decoration: none;
 }
 
@@ -643,7 +638,7 @@ header {
 }
 
 .technical {
-  background: #eeeeee;
+  background: white;
   color: #474d5d;
 }
 .technical .container {
@@ -826,7 +821,7 @@ header {
  10. portfolio Style
 ------------------------------------------------------*/
 .portfolio {
-  background: #2bb3dd;
+  background: #4d515c;
 }
 .portfolio .container {
   padding-top: 85px;
@@ -1141,8 +1136,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 }
 
 .conForm input {
-  background: #585f73;
-  color: #93959c;
+  color: black;
   padding: 15px 30px;
   border: none;
   margin-right: 3%;
@@ -1155,8 +1149,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 }
 
 .conForm textarea {
-  background: #585f73;
-  color: #93959c;
+  color: black;
   padding: 15px 30px;
   border: none;
   margin-bottom: 40px;
@@ -1168,7 +1161,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 .conForm .submitBnt {
   background: #ff675f;
   font-family: "Open Sans", sans-serif;
-  color: #fff;
+  color: rgb(63, 63, 63);
   font-size: 16px;
   font-weight: 600;
   text-align: center;
@@ -1177,6 +1170,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 }
 .conForm .submitBnt:hover {
   background: #f5534b;
+  color: white;
 }
 
 .textGroup {
@@ -1202,7 +1196,8 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
  12. Footer Style
 ------------------------------------------------------*/
 .footer {
-  background: #00bdbd;
+  background: #1e222b;
+  border-top: 2px solid #171a20;
 }
 .footer .container {
   padding: 40px 0;
@@ -1217,7 +1212,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
   display: inline-block;
   text-align: center;
   background: #ffffff;
-  color: #00bdbd;
+  color: #262b37;
   line-height: 42px;
   margin: 0 6px;
   width: 42px !important;
@@ -1227,14 +1222,14 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
   border-radius: 50%;
 }
 .footer ul li:hover {
-  background: #0a9f9f;
+  background: #ff675f;
 }
 .footer ul li:hover a {
   color: #fff;
 }
 
 .footer ul li a {
-  color: #00bdbd;
+  color: #262b37;
   width: 42px !important;
   height: 42px !important;
 }
