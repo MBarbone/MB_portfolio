@@ -904,6 +904,8 @@ ul.portfolioContainer li img {
   width: 100%;
   height: auto;
   display: block;
+  width: 278px;
+  height: 190px;
 }
 
 span.hoverBox {
