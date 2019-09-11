@@ -103,7 +103,6 @@
   font-variant: normal;
   font-family: "codropsicons";
   line-height: 1;
-  speak: none;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -473,6 +472,10 @@ h4.subHeading {
   display: block;
 }
 
+#enterBtn {
+  margin-top: 25px;
+}
+
 /*----------------------------------------------------
  5.	Menu Style
 ------------------------------------------------------*/
@@ -573,8 +576,7 @@ h4.subHeading {
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
-}
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
